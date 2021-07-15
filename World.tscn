@@ -1,3 +1,29 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Personagem.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Hero Idle.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.0
+height = 8.0
 
 [node name="World" type="Node2D"]
+
+[node name="Personagem" type="KinematicBody2D" parent="."]
+position = Vector2( 157, 89 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Personagem"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Personagem"]
+position = Vector2( 0, 6 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 36, 42, 25, 40, 12, 44, 15, 72, 14, 103, 14, 134, 17, 150, 32, 162, 56, 165, 103, 164, 139, 165, 163, 166, 204, 168, 239, 171, 270, 170, 288, 168, 301, 160, 310, 131, 303, 95, 298, 56, 293, 25, 251, 3, 223, 9, 196, 10, 159, 9, 122, 10, 97, 11, 76, 12, 52, 16, 43, 22, 46, 30, 55, 30, 75, 26, 112, 22, 141, 20, 171, 21, 199, 24, 225, 27, 260, 37, 283, 52, 289, 61, 295, 105, 292, 125, 285, 146, 264, 155, 229, 155, 190, 151, 151, 145, 110, 144, 73, 146, 57, 148, 30, 145, 26, 110, 27, 88, 35, 53 )

@@ -613,11 +613,11 @@ margin_top = 5.0
 margin_right = 64.0
 margin_bottom = 16.0
 
-[node name="Pause" type="Node2D" parent="."]
+[node name="Pause" type="Position2D" parent="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 12 )
 
-[node name="ColorRect" type="ColorRect" parent="Pause"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause"]
 process_priority = -1
 margin_left = -53.0
 margin_top = -43.0
@@ -628,15 +628,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Pause"]
+[node name="Label" type="Label" parent="CanvasLayer/Pause"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 113.963
-margin_top = 52.6922
+margin_top = 64.0
 margin_right = 215.963
-margin_bottom = 88.6922
+margin_bottom = 100.0
 custom_fonts/font = SubResource( 53 )
 text = "Paused"
 __meta__ = {

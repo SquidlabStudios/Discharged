@@ -2,10 +2,12 @@ extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
-const ACCELERATION = 500
-const MAX_SPEED = 80
+var ACCELERATION = 450
+var MAX_SPEED = 55
 const ROLL_SPEED = 125
 const FRICTION = 500
+
+var canRunFast = true;
 
 enum {
 	
@@ -50,7 +52,9 @@ func move_state(delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 
-	if input_vector != Vector2.ZERO:
+	if input_vector != Vector2.ZERO && !Input.is_action_pressed("RunFast"):
+		ACCELERATION = 450
+		MAX_SPEED = 55
 		roll_vector = input_vector
 		swordHitbox.knockback_vector = input_vector
 		animationTree.set("parameters/Idle/blend_position", input_vector)
@@ -59,6 +63,15 @@ func move_state(delta):
 		animationTree.set("parameters/Roll/blend_position",input_vector)
 		animationState.travel("Run")
 		velocity  = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+	elif input_vector != Vector2.ZERO && canRunFast == true && Input.is_action_pressed("RunFast"):
+		ACCELERATION = 600
+		MAX_SPEED = 90
+		roll_vector = input_vector
+		swordHitbox.knockback_vector = input_vector
+		animationTree.set("parameters/RunFast/blend_position",input_vector)
+		animationState.travel("RunFast")
+		velocity  = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		
 	else:
 		animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)

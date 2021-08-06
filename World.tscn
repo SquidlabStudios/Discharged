@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -10,8 +10,7 @@
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Born2bSportyV2.ttf" type="DynamicFontData" id=11]
-[ext_resource path="res://UI/Pause.gd" type="Script" id=12]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -514,10 +513,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="DynamicFont" id=53]
-size = 36
-font_data = ExtResource( 11 )
-
 [node name="World" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
@@ -597,7 +592,7 @@ position = Vector2( 27, 163 )
 position = Vector2( 19, 73 )
 
 [node name="Bat" parent="YSort" instance=ExtResource( 7 )]
-position = Vector2( 85.2649, 57 )
+position = Vector2( 85, 57 )
 
 [node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 204, 132 )
@@ -613,34 +608,6 @@ margin_top = 5.0
 margin_right = 64.0
 margin_bottom = 16.0
 
-[node name="Pause" type="Position2D" parent="CanvasLayer"]
-pause_mode = 2
-script = ExtResource( 12 )
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Pause"]
-process_priority = -1
-margin_left = -53.0
-margin_top = -43.0
-margin_right = 371.0
-margin_bottom = 202.0
-color = Color( 0.00784314, 0.00784314, 0.00784314, 0.4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CanvasLayer/Pause"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 113.963
-margin_top = 64.0
-margin_right = 215.963
-margin_bottom = 100.0
-custom_fonts/font = SubResource( 53 )
-text = "Paused"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 11 )]
 
 [editable path="Camera2D"]

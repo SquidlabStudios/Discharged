@@ -11,3 +11,12 @@ func _ready():
 	
 	
 	
+
+
+func _on_menuSair_pressed():
+	pass # Replace with function body.
+
+
+
+
+	

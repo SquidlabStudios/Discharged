@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/texturas/chão 3.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/esgoto e porão tileset.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "esgoto e porão tileset.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 0, 272, 288 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 1 ), 292, Vector2( 0, 2 ), 36, Vector2( 0, 3 ), 384, Vector2( 0, 4 ), 438, Vector2( 0, 5 ), 6, Vector2( 0, 7 ), 288, Vector2( 0, 8 ), 256, Vector2( 0, 9 ), 260, Vector2( 0, 10 ), 4, Vector2( 1, 1 ), 73, Vector2( 1, 2 ), 9, Vector2( 1, 6 ), 288, Vector2( 1, 7 ), 360, Vector2( 1, 8 ), 320, Vector2( 1, 9 ), 325, Vector2( 1, 10 ), 261, Vector2( 1, 11 ), 4, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 192, Vector2( 2, 4 ), 219, Vector2( 2, 5 ), 3, Vector2( 2, 6 ), 216, Vector2( 2, 7 ), 72, Vector2( 2, 8 ), 64, Vector2( 2, 9 ), 65, Vector2( 2, 10 ), 65, Vector2( 2, 11 ), 1, Vector2( 3, 1 ), 219, Vector2( 3, 2 ), 27, Vector2( 3, 3 ), 384, Vector2( 3, 4 ), 438, Vector2( 3, 5 ), 6, Vector2( 3, 7 ), 216, Vector2( 3, 8 ), 192, Vector2( 3, 9 ), 195, Vector2( 3, 10 ), 3, Vector2( 4, 2 ), 6, Vector2( 4, 4 ), 32, Vector2( 4, 7 ), 438, Vector2( 4, 8 ), 432, Vector2( 4, 9 ), 390, Vector2( 4, 10 ), 6, Vector2( 5, 1 ), 146, Vector2( 5, 2 ), 151, Vector2( 5, 3 ), 2, Vector2( 5, 4 ), 24, Vector2( 5, 7 ), 73, Vector2( 5, 8 ), 72, Vector2( 5, 9 ), 65, Vector2( 5, 10 ), 1, Vector2( 6, 2 ), 1, Vector2( 6, 4 ), 56, Vector2( 6, 14 ), 438, Vector2( 6, 15 ), 438, Vector2( 7, 1 ), 105, Vector2( 7, 2 ), 73, Vector2( 7, 3 ), 9, Vector2( 7, 14 ), 292, Vector2( 7, 15 ), 36, Vector2( 8, 1 ), 56, Vector2( 8, 14 ), 73, Vector2( 8, 15 ), 9, Vector2( 9, 1 ), 24, Vector2( 9, 15 ), 288, Vector2( 9, 16 ), 260, Vector2( 9, 17 ), 4, Vector2( 10, 1 ), 56, Vector2( 10, 2 ), 48, Vector2( 10, 15 ), 216, Vector2( 10, 16 ), 195, Vector2( 10, 17 ), 3, Vector2( 11, 0 ), 128, Vector2( 11, 1 ), 154, Vector2( 11, 2 ), 410, Vector2( 11, 3 ), 146, Vector2( 11, 15 ), 504, Vector2( 11, 16 ), 455, Vector2( 11, 17 ), 7, Vector2( 12, 2 ), 192 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 0.0715046, 0.0635462 )
+scale = Vector2( 1, 1.03333 )
+texture = ExtResource( 1 )
+offset = Vector2( 160, 90 )
+region_enabled = true
+region_rect = Rect2( 0, -32, 320, 180 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 81.0718, 91.3171 )

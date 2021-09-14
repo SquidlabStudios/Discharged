@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sprite fabrica.png-e597e7baa2b2220caf251b16ba0e1983.stex"
+path="res://.import/Fase na fabrica.png-89f50008a8c9216bdd36959d96993e94.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/sprite fabrica.png"
-dest_files=[ "res://.import/sprite fabrica.png-e597e7baa2b2220caf251b16ba0e1983.stex" ]
+source_file="res://World/Fase na fabrica.png"
+dest_files=[ "res://.import/Fase na fabrica.png-89f50008a8c9216bdd36959d96993e94.stex" ]
 
 [params]
 

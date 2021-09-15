@@ -1,0 +1,50 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1631674750.cfg"
+		},
+		{
+			"action": "join",
+			"character": "character-1631673948.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://Music and Sounds/Voice/W3M.mp3",
+			"volume": 0
+		},
+		{
+			"character": "character-1631673948.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mantenha a calma, você logo deve encontrar uma estação de recarga para reparar estes danos."
+		},
+		{
+			"action": "leaveall",
+			"character": "character-1631673948.json",
+			"event_id": "dialogic_003"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1631677432.json",
+		"name": "segunda_fala"
+	}
+}

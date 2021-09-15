@@ -18,7 +18,7 @@ func set_max_hearts (value):
 		heartUIEmpty.rect_size.x = max_hearts * 15	
 
 func _ready():
-	self.max_hearts = PlayerStats.max_health
-	self.hearts = PlayerStats.health
-	PlayerStats.connect("health_changed", self, "set_hearts")
-	PlayerStats.connect("max_health_changed", self, "set_max_hearts")
+	self.max_hearts = ps.max_health
+	self.hearts = ps.health
+	ps.connect("health_changed", self, "set_hearts")
+	ps.connect("max_health_changed", self, "set_max_hearts")

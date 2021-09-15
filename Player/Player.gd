@@ -26,7 +26,7 @@ enum {
 var state = MOVE
 var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
-var stats = PlayerStats
+var stats = ps
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -42,6 +42,12 @@ func _ready():
 	swordHitbox.knockback_vector = roll_vector
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("interact"):
+		$Area2D/CollisionShape2D.disabled = false
+	else:
+		$Area2D/CollisionShape2D.disabled = true
+	
+	
 	match state:
 		MOVE:
 			move_state(delta)

@@ -1,16 +1,24 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sprites/Mapas/Esgoto.png" type="Texture" id=5]
+[ext_resource path="res://Music and Sounds/Ambience/ESGOTO.mp3" type="AudioStream" id=6]
+[ext_resource path="res://World/Esgoto.gd" type="Script" id=7]
+[ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/PainelDeRecarga.tscn" type="PackedScene" id=9]
 
 [node name="Esgoto" type="Node2D"]
+script = ExtResource( 7 )
 
 [node name="Esgoto" type="Sprite" parent="."]
 position = Vector2( 554, -47 )
 texture = ExtResource( 5 )
+
+[node name="PainelDeRecarga" parent="." instance=ExtResource( 9 )]
+position = Vector2( 723, -219 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 position = Vector2( -14, 92 )
@@ -29,6 +37,9 @@ position = Vector2( -14, 92 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
+[node name="Bat6" parent="YSort" instance=ExtResource( 8 )]
+position = Vector2( 566, -92 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -38,5 +49,13 @@ margin_right = 64.0
 margin_bottom = 16.0
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( -62, 76, 546, 76, 546, -276, 642, -276, 642, -198, 898, -197, 898, 27, 1026, 27, 1026, 123, 802, 123, 802, 27, 834, 27, 834, -133, 642, -133, 642, 172, -62, 172, -62, 79, -64, 74, -88, 86, -89, 192, 385, 198, 703, 200, 673, 114, 674, -90, 785, -102, 800, -65, 768, -34, 771, 152, 969, 157, 1106, 150, 1055, -66, 943, -73, 938, -286, 699, -290, 661, -367, 475, -369, 493, -65, 215, -16, -70, -18, -95, 49, -73, 72, -61, 71 )
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
 
 [editable path="Camera2D"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/W2M.mp3-7879c1f19aa92215f6313673ecd3ae4f.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Voice/W2M.mp3"
+dest_files=[ "res://.import/W2M.mp3-7879c1f19aa92215f6313673ecd3ae4f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

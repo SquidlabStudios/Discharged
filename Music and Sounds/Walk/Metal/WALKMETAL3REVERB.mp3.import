@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WALKMETAL3REVERB.mp3-e77f87bd8dafc671771b4864f1c5cc94.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Walk/Metal/WALKMETAL3REVERB.mp3"
+dest_files=[ "res://.import/WALKMETAL3REVERB.mp3-e77f87bd8dafc671771b4864f1c5cc94.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

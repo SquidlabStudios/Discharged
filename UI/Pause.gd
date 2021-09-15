@@ -14,3 +14,10 @@ func _process(delta):
 			get_tree().paused = false
 			$Label.visible = false
 			$ColorRect.visible = false
+
+
+func _on_NewGame_pressed():
+	get_tree().reload_current_scene()
+	get_tree().paused = false
+	$Label.visible = false
+	$ColorRect.visible = false

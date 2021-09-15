@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ESGOTO.mp3-813210ce75b4b84aa6efd2904cf27c29.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Ambience/ESGOTO.mp3"
+dest_files=[ "res://.import/ESGOTO.mp3-813210ce75b4b84aa6efd2904cf27c29.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

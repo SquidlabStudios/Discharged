@@ -8,8 +8,8 @@
 script = ExtResource( 3 )
 
 [node name="capa discharged2" type="Sprite" parent="."]
-position = Vector2( 160, 88.0814 )
-scale = Vector2( 0.166913, 0.162812 )
+position = Vector2( 160, 90.2013 )
+scale = Vector2( 0.166913, 0.16673 )
 texture = ExtResource( 1 )
 
 [node name="Button" parent="capa discharged2" instance=ExtResource( 2 )]

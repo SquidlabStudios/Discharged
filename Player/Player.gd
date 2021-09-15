@@ -2,6 +2,12 @@ extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
+func playWalkSound():
+	if gs.levelReverb == true:
+		$WalkStoneReverb.play()
+	else:
+		$WalkStone.play()
+
 var ACCELERATION = 450
 var MAX_SPEED = 55
 const ROLL_SPEED = 125

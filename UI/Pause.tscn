@@ -115,6 +115,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Label/Control/NinePatchRect/CenterContainer/VBoxContainer/NewGame" to="Label/Control" method="_on_NewGame_pressed"]
+[connection signal="pressed" from="Label/Control/NinePatchRect/CenterContainer/VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="Label/Control/NinePatchRect/CenterContainer/VBoxContainer/Fullscreen" to="Label/Control" method="_on_Fullscreen_pressed"]
 [connection signal="pressed" from="Label/Control/NinePatchRect/CenterContainer/VBoxContainer/Exit" to="Label/Control" method="_on_Exit_pressed"]

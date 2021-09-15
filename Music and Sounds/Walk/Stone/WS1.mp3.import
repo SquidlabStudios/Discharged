@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WS1.mp3-573e3cdebcc8b05f75e098f47fd99ee7.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Walk/Stone/WS1.mp3"
+dest_files=[ "res://.import/WS1.mp3-573e3cdebcc8b05f75e098f47fd99ee7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

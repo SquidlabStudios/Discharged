@@ -15,3 +15,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area2D_area_entered(area):
+	var fala_final = Dialogic.start("fala_final", false)
+	add_child(fala_final)

@@ -1,0 +1,42 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1631674750.cfg"
+		},
+		{
+			"action": "join",
+			"character": "character-1631673948.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1631673948.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ótimo! Você conseguiu eliminar todos eles, nossa energia está restaurada!"
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.2.4",
+		"file": "timeline-1631683911.json",
+		"name": "fala_final"
+	}
+}

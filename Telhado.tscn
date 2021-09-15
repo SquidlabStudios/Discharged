@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Music and Sounds/Ambience/TELHADO.mp3" type="AudioStream" id=1]
 [ext_resource path="res://sprites/Mapas/Telhado.png" type="Texture" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://Enemies/Robo4.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Enemies/Robo2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Enemies/Robo3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/Mapas/botaofinal.png" type="Texture" id=12]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 17.0294
 
 [node name="Telhado" type="Node2D"]
 script = ExtResource( 8 )
@@ -112,5 +116,18 @@ position = Vector2( 128, -240 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 872, 216 )
+
+[node name="botaofinal" type="Sprite" parent="."]
+position = Vector2( 791, 71 )
+texture = ExtResource( 12 )
+
+[node name="Area2D" type="Area2D" parent="botaofinal"]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="botaofinal/Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="area_entered" from="botaofinal/Area2D" to="." method="_on_Area2D_area_entered"]
 
 [editable path="Camera2D"]

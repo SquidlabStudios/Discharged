@@ -46,7 +46,8 @@ _global_script_class_icons={
 
 config/name="Discharged"
 run/main_scene="res://UI/TelaStart_inicio.tscn"
-config/icon="res://icon.png"
+config/icon="res://UI/HeartUIFull.png"
+config/windows_native_icon="res://Discharged.ico"
 
 [autoload]
 
@@ -65,7 +66,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/randomAudioStreamPlayer/plugin.cfg" )
 
 [importer_defaults]
 

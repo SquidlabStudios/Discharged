@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Discharged"
-run/main_scene="res://World.tscn"
+run/main_scene="res://UI/TelaStart_inicio.tscn"
 config/icon="res://icon.png"
 
 [autoload]

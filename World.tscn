@@ -1,8 +1,9 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://sprites/ParteInterna/tileset_ParteInterna.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/light.png" type="Texture" id=3]
+[ext_resource path="res://Enemies/Robo1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
@@ -492,6 +493,7 @@ __meta__ = {
 }
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color( 0.168627, 0.168627, 0.168627, 1 )
 
 [node name="FloorAndWalls" type="TileMap" parent="."]
@@ -570,5 +572,8 @@ margin_right = 64.0
 margin_bottom = 16.0
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="Robot1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 354.286, 102.857 )
 
 [editable path="Camera2D"]

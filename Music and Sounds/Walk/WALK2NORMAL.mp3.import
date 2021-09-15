@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WALK2NORMAL.mp3-a5c03ec8d54415ceafee9fd57b8b7bba.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Walk/WALK2NORMAL.mp3"
+dest_files=[ "res://.import/WALK2NORMAL.mp3-a5c03ec8d54415ceafee9fd57b8b7bba.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

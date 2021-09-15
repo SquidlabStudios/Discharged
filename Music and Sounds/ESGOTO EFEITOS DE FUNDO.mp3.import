@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ESGOTO EFEITOS DE FUNDO.mp3-0f3964a83d410409f41ee6fd4ca5547a.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/ESGOTO EFEITOS DE FUNDO.mp3"
+dest_files=[ "res://.import/ESGOTO EFEITOS DE FUNDO.mp3-0f3964a83d410409f41ee6fd4ca5547a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

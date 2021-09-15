@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=25 format=2]
+=======
+[gd_scene load_steps=23 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://Enemies/Bat.png" type="Texture" id=1]
 [ext_resource path="res://Shadows/SmallShadow.png" type="Texture" id=2]
@@ -11,11 +15,14 @@
 [ext_resource path="res://Enemies/WanderController.tscn" type="PackedScene" id=9]
 [ext_resource path="res://WhiteColor.shader" type="Shader" id=10]
 
+<<<<<<< Updated upstream
 [sub_resource type="ShaderMaterial" id=12]
 resource_local_to_scene = true
 shader = ExtResource( 10 )
 shader_param/active = false
 
+=======
+>>>>>>> Stashed changes
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 16, 24 )
@@ -60,12 +67,12 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id=11]
 radius = 5.0
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "Start"
 length = 0.2
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/path = NodePath("../Bat/Bat4:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -77,11 +84,11 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=13]
 resource_name = "Stop"
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("AnimatedSprite:material:shader_param/active")
+tracks/0/path = NodePath("../Bat/Bat4:material:shader_param/active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -98,9 +105,15 @@ collision_layer = 0
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+<<<<<<< Updated upstream
 material = SubResource( 12 )
 frames = SubResource( 6 )
 animation = "Fly"
+=======
+frames = SubResource( 6 )
+animation = "Fly"
+frame = 1
+>>>>>>> Stashed changes
 playing = true
 offset = Vector2( 0, -12 )
 
@@ -141,8 +154,13 @@ shape = SubResource( 11 )
 [node name="WanderController" parent="." instance=ExtResource( 9 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+<<<<<<< Updated upstream
 anims/Start = SubResource( 13 )
 anims/Stop = SubResource( 14 )
+=======
+anims/Start = SubResource( 12 )
+anims/Stop = SubResource( 13 )
+>>>>>>> Stashed changes
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 [connection signal="invincibility_ended" from="Hurtbox" to="." method="_on_Hurtbox_invincibility_ended"]

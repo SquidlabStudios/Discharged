@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WALK1REVERB.mp3-3f03fca114db29d7c6f343efd4aa61c6.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Walk/WALK1REVERB.mp3"
+dest_files=[ "res://.import/WALK1REVERB.mp3-3f03fca114db29d7c6f343efd4aa61c6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

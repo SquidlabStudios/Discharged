@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
@@ -6,12 +7,20 @@
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=4]
 [ext_resource path="res://World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
+=======
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://sprites/mapas/MAPA ESGOTO TESTE 1.png" type="Texture" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Music and Sounds/ESGOTO EFEITOS DE FUNDO.mp3" type="AudioStream" id=3]
+>>>>>>> Stashed changes
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=10]
 [ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=11]
 
+<<<<<<< Updated upstream
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
 0/texture = ExtResource( 4 )
@@ -513,11 +522,14 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
+=======
+>>>>>>> Stashed changes
 [node name="World" type="Node2D"]
 __meta__ = {
 "_edit_lock_": true
 }
 
+<<<<<<< Updated upstream
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 159, 81 )
 scale = Vector2( 2.00278, 2.00278 )
@@ -546,15 +558,54 @@ position = Vector2( -16, -32 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 352, 208 )
+=======
+[node name="MetalArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MetalArea"]
+polygon = PoolVector2Array( -18.5714, 100, -18.5714, 164.286, 622.857, 164.286, 622.857, -12.8571, 655.714, -12.8571, 655.714, -45.7143, 622.857, -45.7143, 622.857, -252.857, 590, -252.857, 590, 131.429, 302.857, 131.429, 302.857, 100, 270, 100, 270, 131.429, 15.7143, 131.429, 15.7143, 100 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Camera2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( -1.42993, 111.017 )
+scale = Vector2( 1, 1 )
+
+[node name="TopLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( -100.583, -258.324 )
+
+[node name="BottomRight" parent="Camera2D/Limits" index="1"]
+position = Vector2( 812.287, 211.143 )
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( -49.4175, 98.8896, 558.214, 99.2857, 558.911, -252.807, 654.646, -252.47, 654.983, -173.926, 910.167, -173.589, 910.167, 50.918, 1038.94, 50.2438, 1038.94, 146.654, 814.768, 146.317, 815.105, 49.5696, 846.118, 49.5696, 847.129, -110.215, 654.646, -109.878, 654.984, 195.87, -49.5514, 195.196, -49.5514, 103.168, -56.2933, 97.7746, -49.2142, 92.381, -49.2142, 33.0518, -73.8224, 29.6808, -93.4036, 224.834, 39.6883, 250.49, 274.203, 241.27, 661.853, 238.063, 683.768, 222.066, 683.012, 129.741, 684.525, 9.41629, 677.714, -62.4759, 689.066, -87.4489, 769.282, -87.4489, 813.174, -74.584, 811.661, -54.1515, 776.85, -48.8542, 768.525, 44.984, 772.309, 173.633, 778.363, 244.012, 884.31, 256.877, 1062.15, 260.66, 1163.55, 249.309, 1184.74, 152.444, 1169.61, -32.9622, 1148.42, -57.1785, 951.661, -52.638, 941.066, -163.125, 938.039, -238.044, 907.012, -265.287, 698.147, -259.233, 681.498, -319.774, 589.173, -342.477, 499.876, -334.909, 523.335, -213.828, 521.065, -71.5569, 524.849, 1.0919, 308.416, 16.2271, 110.901, 12.4433, -28.8242, 21.0235, -45.6611, 26.6358, -45.6611, 89.5738 )
+
+[node name="MAPA ESGOTO TESTE 1" type="Sprite" parent="."]
+position = Vector2( 566.616, -23.4959 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+>>>>>>> Stashed changes
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
+<<<<<<< Updated upstream
 position = Vector2( 158.727, 79.8863 )
+=======
+position = Vector2( -1.42993, 111.017 )
+>>>>>>> Stashed changes
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 remote_path = NodePath("../../../Camera2D")
 
+<<<<<<< Updated upstream
 [node name="Bushes" type="YSort" parent="YSort"]
 
 [node name="Bush" parent="YSort/Bushes" instance=ExtResource( 1 )]
@@ -599,6 +650,37 @@ position = Vector2( 204, 132 )
 
 [node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 76, 152 )
+=======
+[node name="Bat" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 890.564, 4.4986 )
+
+[node name="Bat2" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 659.152, -130.038 )
+
+[node name="Bat4" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 585.921, -129.434 )
+
+[node name="Bat5" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 775.741, -161.706 )
+
+[node name="Bat6" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 598.855, -204.99 )
+
+[node name="Bat7" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 855.843, -142.988 )
+
+[node name="Bat8" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 636.082, 45.3238 )
+
+[node name="Bat9" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 629.44, -40.6507 )
+
+[node name="Bat10" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 629.373, -228.049 )
+
+[node name="Bat3" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 477.955, 144.758 )
+>>>>>>> Stashed changes
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -609,5 +691,8 @@ margin_right = 64.0
 margin_bottom = 16.0
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[connection signal="area_entered" from="MetalArea" to="YSort/Player" method="_on_MetalArea_area_entered"]
+[connection signal="area_exited" from="MetalArea" to="YSort/Player" method="_on_MetalArea_area_exited"]
 
 [editable path="Camera2D"]

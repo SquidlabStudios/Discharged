@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/WALKMETAL3NORMAL.mp3-9cb59c76b615feec36f89edb73dfa0da.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Walk/Metal/WALKMETAL3NORMAL.mp3"
+dest_files=[ "res://.import/WALKMETAL3NORMAL.mp3-9cb59c76b615feec36f89edb73dfa0da.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

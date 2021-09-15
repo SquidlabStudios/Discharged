@@ -2,6 +2,14 @@ extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
+var isWalkingOnMetal = false
+
+func WalkSoundReverbPlay():
+	if isWalkingOnMetal == true:
+		$WalkSoundReverbMetal.play()
+	elif isWalkingOnMetal == false:
+		$WalkSoundReverb.play()
+
 var ACCELERATION = 450
 var MAX_SPEED = 55
 const ROLL_SPEED = 125
@@ -114,3 +122,11 @@ func _on_Hurtbox_invincibility_started():
 	
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
+
+
+func _on_MetalArea_area_entered(area):
+	isWalkingOnMetal = true
+
+
+func _on_MetalArea_area_exited(area):
+	isWalkingOnMetal = false

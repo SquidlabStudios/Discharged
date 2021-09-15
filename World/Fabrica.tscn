@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://World/Fabrica.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Robo1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/PainelDeRecarga.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
@@ -8,6 +9,12 @@
 [ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Music and Sounds/Ambience/PORAO.mp3" type="AudioStream" id=8]
 [ext_resource path="res://sprites/Mapas/Fabrica.png" type="Texture" id=9]
+[ext_resource path="res://Enemies/Robo3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Enemies/Robo2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Enemies/Robo4.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/FabricaTroca.gd" type="Script" id=13]
+
+[sub_resource type="CapsuleShape2D" id=1]
 
 [node name="Fabrica" type="Node2D"]
 script = ExtResource( 1 )
@@ -30,6 +37,39 @@ position = Vector2( 924, 192 )
 
 [node name="YSort" type="YSort" parent="."]
 
+[node name="Robot1" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 488, 72 )
+
+[node name="Robot2" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 696, -96 )
+
+[node name="Robot3" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 656, 32 )
+
+[node name="Robot4" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 640, -208 )
+
+[node name="Robot5" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 528, -200 )
+
+[node name="Robot6" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 232, -80 )
+
+[node name="Robot7" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 216, -184 )
+
+[node name="Robot9" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 840, 40 )
+
+[node name="Robot10" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 848, -72 )
+
+[node name="Robot11" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 424, -72 )
+
+[node name="Robot8" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 840, -160 )
+
 [node name="Player" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 208, 130 )
 
@@ -39,14 +79,25 @@ remote_path = NodePath("../../../Camera2D")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 4 )]
-visible = false
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 64.0
 margin_bottom = 16.0
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 7 )]
-visible = false
+
+[node name="TrocadeFase" type="Node2D" parent="."]
+position = Vector2( 1050, -453 )
+script = ExtResource( 13 )
+
+[node name="Area2D" type="Area2D" parent="TrocadeFase"]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrocadeFase/Area2D"]
+position = Vector2( -706, 253 )
+rotation = 1.5708
+shape = SubResource( 1 )
 
 [node name="Paredes" type="StaticBody2D" parent="."]
 position = Vector2( 210, -293 )
@@ -57,5 +108,7 @@ polygon = PoolVector2Array( -25, 413, 231, 412, 232, 349, 360, 348, 360, 123, 32
 [node name="AmbientSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -20.0
+
+[connection signal="area_entered" from="TrocadeFase/Area2D" to="TrocadeFase" method="_on_Area2D_area_entered"]
 
 [editable path="Camera2D"]

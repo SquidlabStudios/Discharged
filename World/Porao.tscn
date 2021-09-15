@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/PainelDeRecarga.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://sprites/Mapas/Porao.png" type="Texture" id=8]
 [ext_resource path="res://World/Porao.gd" type="Script" id=9]
 [ext_resource path="res://Enemies/Robo1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://World/PoraoTroca.gd" type="Script" id=11]
+
+[sub_resource type="CapsuleShape2D" id=1]
 
 [node name="Porao" type="Node2D"]
 script = ExtResource( 9 )
@@ -23,6 +26,9 @@ position = Vector2( 298, -205 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 865, 131 )
+
+[node name="TopLeft" parent="Camera2D/Limits" index="0"]
+position = Vector2( 210, -293 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
 position = Vector2( 897, 198 )
@@ -80,14 +86,25 @@ position = Vector2( 404, -227 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 3 )]
-visible = false
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 64.0
 margin_bottom = 16.0
 
 [node name="Pause" parent="CanvasLayer" instance=ExtResource( 6 )]
-visible = false
+
+[node name="TrocadeFase" type="Node2D" parent="."]
+position = Vector2( 210, -293 )
+script = ExtResource( 11 )
+
+[node name="Area2D" type="Area2D" parent="TrocadeFase"]
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrocadeFase/Area2D"]
+position = Vector2( 30, 61 )
+rotation = 1.5708
+shape = SubResource( 1 )
 
 [node name="Paredes" type="StaticBody2D" parent="."]
 position = Vector2( 210, -293 )
@@ -98,5 +115,7 @@ polygon = PoolVector2Array( 568, 437, 632, 437, 680, 436, 680, 406, 568, 406, 56
 [node name="AmbientSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = -20.0
+
+[connection signal="area_entered" from="TrocadeFase/Area2D" to="TrocadeFase" method="_on_Area2D_area_entered"]
 
 [editable path="Camera2D"]

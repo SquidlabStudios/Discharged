@@ -17,4 +17,4 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
-	get_tree().change_scene("res://World/FasePorao.tscn")
+	get_tree().change_scene("res://World/Porao.tscn")

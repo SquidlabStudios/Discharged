@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TELHADO.mp3-4742ed970b570546dfda73e477980ca7.mp3str"
+
+[deps]
+
+source_file="res://Music and Sounds/Ambience/TELHADO.mp3"
+dest_files=[ "res://.import/TELHADO.mp3-4742ed970b570546dfda73e477980ca7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Music and Sounds/Ambience/TELHADO.mp3" type="AudioStream" id=1]
+[ext_resource path="res://sprites/Mapas/Telhado.png" type="Texture" id=2]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Telhado.gd" type="Script" id=8]
+
+[node name="Telhado" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Porao" type="Sprite" parent="."]
+position = Vector2( 554, -47 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 313, 198 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 313, 198 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera2D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+visible = false
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 64.0
+margin_bottom = 16.0
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+position = Vector2( 210, -293 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 86, 505, 120, 505, 120, 442, 182, 441, 184, 281, 120, 281, 120, 217, 343, 217, 343, 409, 439, 409, 503, 385, 503, 420, 663, 420, 662, 292, 503, 292, 503, 325, 439, 347, 439, 154, 341, 153, 341, 186, 315, 186, 316, 152, 56, 153, 55, 313, 23, 313, 23, 442, 86, 441, 86, 502, 81, 511, 92, 512, 82, 549, -119, 544, -89, 166, -83, 50, 166, 58, 505, 78, 751, 210, 745, 486, 661, 519, 511, 489, 396, 478, 316, 450, 299, 360, 225, 374, 225, 476, 139, 522, 86, 510 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 153, 182, 153, 236, 180, 229, 180, 182 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 57, 361, 57, 400, 97, 400, 105, 391, 105, 378, 96, 362 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 144, 301, 147, 309, 151, 347, 162, 348, 158, 316, 165, 304, 161, 299 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 333, 343, 381, 358, 388, 397, 381, 422, 331, 413 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 502, 288, 504, 344, 532, 344, 532, 289 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Paredes"]
+polygon = PoolVector2Array( 629, 332, 632, 340, 638, 347, 638, 379, 648, 379, 645, 342, 652, 336, 651, 332 )
+
+[node name="AmbientSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -20.0

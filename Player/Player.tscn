@@ -807,127 +807,127 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=64]
+[sub_resource type="AnimationNodeAnimation" id=85]
 animation = "AttackLeft"
 
-[sub_resource type="AnimationNodeAnimation" id=65]
+[sub_resource type="AnimationNodeAnimation" id=86]
 animation = "AttackDown"
 
-[sub_resource type="AnimationNodeAnimation" id=66]
+[sub_resource type="AnimationNodeAnimation" id=87]
 animation = "AttackRight"
 
-[sub_resource type="AnimationNodeAnimation" id=67]
+[sub_resource type="AnimationNodeAnimation" id=88]
 animation = "AttackUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=27]
-blend_point_0/node = SubResource( 64 )
+blend_point_0/node = SubResource( 85 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 65 )
+blend_point_1/node = SubResource( 86 )
 blend_point_1/pos = Vector2( 0, 1.1 )
-blend_point_2/node = SubResource( 66 )
+blend_point_2/node = SubResource( 87 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 67 )
+blend_point_3/node = SubResource( 88 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=68]
+[sub_resource type="AnimationNodeAnimation" id=89]
 animation = "IdleLeft"
 
-[sub_resource type="AnimationNodeAnimation" id=69]
+[sub_resource type="AnimationNodeAnimation" id=90]
 animation = "idleDown"
 
-[sub_resource type="AnimationNodeAnimation" id=70]
+[sub_resource type="AnimationNodeAnimation" id=91]
 animation = "IdleRight"
 
-[sub_resource type="AnimationNodeAnimation" id=71]
+[sub_resource type="AnimationNodeAnimation" id=92]
 animation = "IdleUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=32]
-blend_point_0/node = SubResource( 68 )
+blend_point_0/node = SubResource( 89 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 69 )
+blend_point_1/node = SubResource( 90 )
 blend_point_1/pos = Vector2( 0, 1.1 )
-blend_point_2/node = SubResource( 70 )
+blend_point_2/node = SubResource( 91 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 71 )
+blend_point_3/node = SubResource( 92 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=72]
+[sub_resource type="AnimationNodeAnimation" id=93]
 animation = "RollLeft"
 
-[sub_resource type="AnimationNodeAnimation" id=73]
+[sub_resource type="AnimationNodeAnimation" id=94]
 animation = "RollDown"
 
-[sub_resource type="AnimationNodeAnimation" id=74]
+[sub_resource type="AnimationNodeAnimation" id=95]
 animation = "RollRight"
 
-[sub_resource type="AnimationNodeAnimation" id=75]
+[sub_resource type="AnimationNodeAnimation" id=96]
 animation = "RollUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=37]
-blend_point_0/node = SubResource( 72 )
+blend_point_0/node = SubResource( 93 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 73 )
+blend_point_1/node = SubResource( 94 )
 blend_point_1/pos = Vector2( 0, 1.1 )
-blend_point_2/node = SubResource( 74 )
+blend_point_2/node = SubResource( 95 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 75 )
+blend_point_3/node = SubResource( 96 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 snap = Vector2( 0.01, 0.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=76]
+[sub_resource type="AnimationNodeAnimation" id=97]
 animation = "RunLeft"
 
-[sub_resource type="AnimationNodeAnimation" id=77]
+[sub_resource type="AnimationNodeAnimation" id=98]
 animation = "RunDown"
 
-[sub_resource type="AnimationNodeAnimation" id=78]
+[sub_resource type="AnimationNodeAnimation" id=99]
 animation = "RunRight"
 
-[sub_resource type="AnimationNodeAnimation" id=79]
+[sub_resource type="AnimationNodeAnimation" id=100]
 animation = "RunUp"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=42]
-blend_point_0/node = SubResource( 76 )
+blend_point_0/node = SubResource( 97 )
 blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 77 )
+blend_point_1/node = SubResource( 98 )
 blend_point_1/pos = Vector2( 0, 1.1 )
-blend_point_2/node = SubResource( 78 )
+blend_point_2/node = SubResource( 99 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 79 )
+blend_point_3/node = SubResource( 100 )
 blend_point_3/pos = Vector2( 0, -1.1 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id=80]
+[sub_resource type="AnimationNodeAnimation" id=101]
 animation = "RunFastDown"
 
-[sub_resource type="AnimationNodeAnimation" id=81]
+[sub_resource type="AnimationNodeAnimation" id=102]
 animation = "RunFastUp"
 
-[sub_resource type="AnimationNodeAnimation" id=82]
+[sub_resource type="AnimationNodeAnimation" id=103]
 animation = "RunFastRight"
 
-[sub_resource type="AnimationNodeAnimation" id=83]
+[sub_resource type="AnimationNodeAnimation" id=104]
 animation = "RunFastLeft"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=47]
-blend_point_0/node = SubResource( 80 )
+blend_point_0/node = SubResource( 101 )
 blend_point_0/pos = Vector2( 0, 1.1 )
-blend_point_1/node = SubResource( 81 )
+blend_point_1/node = SubResource( 102 )
 blend_point_1/pos = Vector2( 0, -1.1 )
-blend_point_2/node = SubResource( 82 )
+blend_point_2/node = SubResource( 103 )
 blend_point_2/pos = Vector2( 1, 0 )
-blend_point_3/node = SubResource( 83 )
+blend_point_3/node = SubResource( 104 )
 blend_point_3/pos = Vector2( -1, 0 )
 min_space = Vector2( -1, -1.1 )
 max_space = Vector2( 1, 1.1 )

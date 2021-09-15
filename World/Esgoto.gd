@@ -5,6 +5,7 @@ var terceiraFalaRodou = false
 
 func _ready():
 	$AmbientSound.play()
+	gs.levelReverb = true
 	var primeira_fala = Dialogic.start("primeira_fala", false)
 	add_child(primeira_fala)
 	ps.health = ps.max_health
